@@ -10,7 +10,7 @@ public class MlecniProizvodi extends Proizvod{
         this.poreklo = poreklo;
     }
     public String toString(){
-        return "Proizvod " + imeProizvoda + " kosta " + cenaSaPdvom() + " i rok trajanja mu je " + rokTrajanja + ". " + "Poreklo je " + poreklo;
+        return "Proizvod " + imeProizvoda + " kosta " + cenaSaPdvom() + " i rok trajanja mu je " + rokTrajanja + ". " + "Poreklo je " + poreklo + ".";
     }
 
 

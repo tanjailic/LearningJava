@@ -1,46 +1,33 @@
 package PredavanjeIV.ZdravstvenaUstanova;
 
+import java.util.ArrayList;
+
 public class Bolnica {
     String imeBolnice;
-    String imeDirektora;
-    int brojZaposlenih;
-    int brojMedicinskihSestara;
-    int brojLekara;
-    int brojOsoblja;
+    Osoblje imeDirektora;
+    ArrayList<MedicinskaSestra> medicinskihSestare;
+    ArrayList<Lekar> lekari;
+    ArrayList<Osoblje> osoblja;
 
-    Bolnica(String imeBolnice, String imeDirektora, int brojZaposlenih){
+    Bolnica(String imeBolnice, Osoblje imeDirektora){
         this.imeBolnice = imeBolnice;
         this.imeDirektora = imeDirektora;
-        this.brojZaposlenih = brojZaposlenih;
     }
 
-    Bolnica(String imeBolnice, String imeDirektora, int brojZaposlenih, int brojMedicinskihSestara){
-        this.imeBolnice = imeBolnice;
-        this.imeDirektora = imeDirektora;
-        this.brojZaposlenih = brojZaposlenih;
-        this.brojMedicinskihSestara = brojMedicinskihSestara;
+    Bolnica(String imeBolnice, Osoblje imeDirektora, ArrayList medicinskihSestare, ArrayList lekari, ArrayList osoblja){
+        this(imeBolnice, imeDirektora);
+        this.medicinskihSestare = medicinskihSestare;
+        this.lekari = lekari;
+        this.osoblja = osoblja;
     }
 
-    Bolnica(String imeBolnice, String imeDirektora, int brojZaposlenih, int brojMedicinskihSestara, int brojLekara){
-        this.imeBolnice = imeBolnice;
-        this.imeDirektora = imeDirektora;
-        this.brojZaposlenih = brojZaposlenih;
-        this.brojMedicinskihSestara = brojMedicinskihSestara;
-        this.brojLekara = brojLekara;
-    }
-
-    Bolnica(String imeBolnice, String imeDirektora, int brojZaposlenih, int brojMedicinskihSestara, int brojLekara, int brojOsoblja){
-        this.imeBolnice = imeBolnice;
-        this.imeDirektora = imeDirektora;
-        this.brojZaposlenih = brojZaposlenih;
-        this.brojMedicinskihSestara = brojMedicinskihSestara;
-        this.brojLekara = brojLekara;
-        this.brojOsoblja = brojOsoblja;
+    int brojZaposlenih(){
+        return medicinskihSestare.size() + lekari.size() + osoblja.size();
     }
 
 
     public String toString(){
-        return "Ime bolnice je " + imeBolnice + ", direktor bolnice je " + imeDirektora + " i u njoj radi " + brojZaposlenih + " ljudi." + "\nOd toga je " + brojMedicinskihSestara + " medicinkih sestara, "
-                + brojLekara + " lekara i " + brojOsoblja + " osoblja.";
+        return "Ime bolnice je " + imeBolnice + " i njen direktor je " + imeDirektora + ". Broj zaposlenih u bolnici je " + brojZaposlenih() + ". \n" +
+                "Od njih broj medicinskih sestara je " + medicinskihSestare.size() + " broj lekara je " + lekari.size() + " i broj osoblja je " + osoblja.size() + ".";
     }
 }

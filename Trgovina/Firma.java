@@ -7,7 +7,9 @@ public class Firma {
     ArrayList<Proizvod> magacin;
 
     Firma(double kapital){
+
         this.kapital = kapital;
+        magacin = new ArrayList<Proizvod>();
     }
 
      public boolean porudzbina(ArrayList<Proizvod> listaProizvoda){
@@ -54,7 +56,7 @@ public class Firma {
     }
 
     public String toString(){
-        return "Firma ima kapital od " + kapital + " dinara.";
+        return "Firma ima kapital od " + kapital + " dinara. \n U magacinu su: \n" + magacin;
     }
 
 }

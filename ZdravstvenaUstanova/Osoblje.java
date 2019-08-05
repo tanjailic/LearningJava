@@ -19,6 +19,6 @@ public class Osoblje {
     }
 
     public String toString(){
-        return "Zaposleni se zove " + ime + " " + prezime + " i zivi na adresi " + adresa + ". \n Broj telefona mu je " + brojTelefona + " i rodjen je " + datumRodjenja + ".";
+        return ime + " " + prezime + " i zivi na adresi " + adresa + ". \n Broj telefona mu je " + brojTelefona + " i rodjen je " + datumRodjenja + ".";
     }
 }

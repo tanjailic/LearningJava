@@ -20,21 +20,26 @@ public class Main {
 
         Meso meso = new Meso("biftek", 1000, rok, "beef");
 
-        ArrayList<Proizvod> shoppingList = new ArrayList<Proizvod>(Arrays.asList(kafa, kafa2, sir, meso));
-        ArrayList<Proizvod> nabavka = new ArrayList<Proizvod>();
+        ArrayList<Proizvod> nabavka = new ArrayList<Proizvod>(Arrays.asList(kafa, kafa2, sir, meso));
+        //ArrayList<Proizvod> nabavka = new ArrayList<Proizvod>();
+
+        ArrayList<Proizvod> kupovina = new ArrayList<Proizvod>(Arrays.asList(kafa2, sir));
 
         Firma endava = new Firma(1500);
 
-        if((endava.nabavka(shoppingList))){
-            if(endava.porudzbina(shoppingList)){
-                System.out.println("Porudzbina je uspela");
-            }else{
-                System.out.println("Proizvodi nisu dostupni, probajte opet da porucite!");
-            }
-        }else{
+        if ((endava.nabavka(nabavka))) {
+            System.out.println(endava);
+        } else {
             System.out.println("Nemate dovoljno para za porudzbinu!");
         }
 
 
+        if (endava.porudzbina(kupovina)) {
+            System.out.println(endava);
+        } else {
+            System.out.println("Nema trazenih proizvoda!");
+        }
     }
+
+
 }

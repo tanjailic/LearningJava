@@ -36,7 +36,7 @@ public abstract class Proizvod {
     }
 
     public String toString(){
-        return "Proizvod " + imeProizvoda + " kosta " + cenaProizvoda + " i rok trajanja mu je " + rokTrajanja;
+        return "Proizvod " + imeProizvoda + " kosta " + cenaProizvoda + " i rok trajanja mu je " + rokTrajanja + "\n";
     }
 
 }

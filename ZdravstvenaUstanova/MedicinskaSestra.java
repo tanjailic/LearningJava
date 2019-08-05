@@ -11,6 +11,6 @@ public class MedicinskaSestra extends Osoblje {
     }
 
     public String toString(){
-        return "Zaposleni se zove " + ime + " " + prezime + ". Po struci je medicinska sestra. " + "Zivi na adresi " + adresa + ". \n Broj telefona mu je " + brojTelefona + " i rodjen je " + datumRodjenja + ".";
+        return ime + " " + prezime + ". Po struci je medicinska sestra. " + "Zivi na adresi " + adresa + ". \n Broj telefona mu je " + brojTelefona + " i rodjen je " + datumRodjenja + ".";
     }
 }

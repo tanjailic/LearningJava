@@ -17,7 +17,6 @@ public class Firma {
         return bolnice.size();
     }
 
-    //TODO:metoda koja prolazi kroz svaku bolnicu i ispisuje njene podatke i podatke zaposlenih
     void getStaff(){
         bolnice.forEach(bolnica -> {
             System.out.println(bolnica);
